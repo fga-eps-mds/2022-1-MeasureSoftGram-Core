@@ -9,7 +9,14 @@ from src.core.interpretation_functions import (
     team_throughput
 )
 from src.core.measures_functions import (
-    calculate_em1, calculate_em2, calculate_em3, calculate_em4, calculate_em5, calculate_em6, calculate_em7
+    calculate_em1,
+    calculate_em2,
+    calculate_em3,
+    calculate_em4,
+    calculate_em5,
+    calculate_em6,
+    calculate_em7,
+    calculate_em8
 )
 from src.core import schemas
 
@@ -131,14 +138,14 @@ MEASURES_INTERPRETATION_MAPPING = {
         "calculation_function": calculate_em3,
         "schema": schemas.DuplicationAbsenceSchema,
     },
-    "ci_feedback_time": {
-        "interpretation_function": ci_feedback_time,
-        "calculation_function": calculate_em7,
-        "schema": schemas.CIFeedbackTimeSchema,
-    },
     "team_throughput": {
         "interpretation_function": team_throughput,
         "calculation_function": calculate_em7,
         "schema": schemas.TeamThroughputSchema,
-    }
+    },
+    "ci_feedback_time": {
+        "interpretation_function": ci_feedback_time,
+        "calculation_function": calculate_em8,
+        "schema": schemas.CIFeedbackTimeSchema,
+    },
 }
